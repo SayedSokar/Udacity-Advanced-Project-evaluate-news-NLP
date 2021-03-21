@@ -1,4 +1,4 @@
-## UDACITY-ADVANCED-PROJECT-EVALUATE-NEWS-NLP
+﻿## UDACITY-ADVANCED-PROJECT-EVALUATE-NEWS-NLP
 
 Project at [Udacity](https://www.udacity.com/course/react-nanodegree--nd019) Become a React Developer Nanodegree program.
 
@@ -16,7 +16,9 @@ This project aims to build a web tool that allows users to run Natural Language 
 * Workbox
 
 ## Installation
-Make sure Node and npm are installed from the terminal, and have been updated to the latest versions
+Make sure Node and npm are installed from the terminal, and have been updated to the latest versions.
+Note: I have wasted a lot of time because of that note (updated to the latest versions) specially with node-sass issues, upgraded the node-sass version to be the same as node version. with yarn just run: yarn add node-sass
+ 
 ```
 node -v
 npm -v
@@ -28,21 +30,13 @@ cd <project directory>
 ```
 2. Clone the repo
 ```
-git clone <repo>
+git clone https://github.com/SayedSokar/Udacity-Advanced-Project-evaluate-news-NLP.git
 ```
-3. Install npm
+3. Install all packages using npm
 ```
-npm install
+npm i
 ```
-4. Install loaders and plugins
-```
-# Choose the necessary installation for your development mode
-npm i -D @babel/core @babel/preset-env babel-loader
-npm i -D style-loader node-sass css-loader sass-loader
-npm i -D clean-webpack-plugin
-npm i -D html-webpack-plugin
-npm i -D mini-css-extract-plugin
-npm i -D optimize-css-assets-webpack-plugin terser-webpack-plugin
+Note: obserive if there are any error during the installation, if errors comes, try to solve before executing the next steps.
 ```
 5. Sign up for an API key at [meaningcloud.com](https://www.meaningcloud.com/developer/create-account)
 
@@ -74,4 +68,6 @@ Command | Action
 
 ------
 
-Made with ❤️️ and javascript
+Best Regards
+Sayed Ramadan 
+

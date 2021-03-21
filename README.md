@@ -1,6 +1,13 @@
 ﻿## UDACITY-ADVANCED-PROJECT-EVALUATE-NEWS-NLP
 
-Project at [Udacity](https://www.udacity.com/course/react-nanodegree--nd019) Become a React Developer Nanodegree program.
+This project is a part of Udacity's Front End Nanodegree Program and its main goals are to help learning the following:
+
+1-Setting up Webpack
+2-Sass styles
+3-Webpack Loaders and Plugins
+4-Creating layouts and page design
+5-Service workers
+6-Using APIs and creating requests to external urls
 
 This project aims to build a web tool that allows users to run Natural Language Processing (NLP) on articles or blogs found on other websites. When a user submits a URL of an article, the web page then dispalys sentiment analysis returned from [meaningcloud API](https://www.meaningcloud.com/products/sentiment-analysis), based on the contents of the article.
 

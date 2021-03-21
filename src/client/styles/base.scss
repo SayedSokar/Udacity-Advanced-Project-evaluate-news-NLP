@@ -8,9 +8,14 @@ main {
     flex: 2;
 }
 
+.container{
+  &.p-class {
+      color:red;
+  }
+}
 section {
     max-width: 1000px;
-    margin: 50px auto;
+    margin: 100px auto;
 }
 strong  {
     font-size: x-large;

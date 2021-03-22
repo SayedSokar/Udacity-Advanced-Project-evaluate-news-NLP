@@ -50,12 +50,12 @@ app.post('/check', async (req, res) => {
         res.send(Apidata)
         
     } catch (error) {
-        console.log(error.message)
+        console.log("error", error.message)
     }
 })
 
 //-----------End of Post Request-------------//
-app.get('/test', function (req, res) {
+app.get('/testGet', function (req, res) {
     res.send(mockAPIResponse)
 })
 //------------------------------------------//

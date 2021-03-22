@@ -1,24 +1,17 @@
+{
+  "presets": ["@babel/preset-env"],
+
+}
+
 // {
-//   "presets": ["@babel/preset-env"],
-//   "plugins": [
+//     "presets": [
 //     [
-//       "@babel/plugin-transform-runtime",
+//             "@babel/preset-env",
 //       {
-//         "regenerator": true
+//         "exclude": [
+//           "transform-regenerator"
+//         ]
 //       }
 //     ]
 //   ]
 // }
-
-{
-    "presets": [
-    [
-            "@babel/preset-env",
-      {
-        "exclude": [
-          "transform-regenerator"
-        ]
-      }
-    ]
-  ]
-}

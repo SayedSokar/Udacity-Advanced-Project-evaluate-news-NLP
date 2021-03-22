@@ -6,7 +6,7 @@ const fetch = require("node-fetch");
 //-----------------------------------------------------//
 async function handleSubmit(e) {
     e.preventDefault()
-    ///alert('here')
+ 
     let url = document.getElementById('url').value
 
     if(Client.validURL(url))

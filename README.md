@@ -75,6 +75,21 @@ Command | Action
 
 ------
 
+------------------------------------------------------------------------------------------
+Note Regarding TEST:
+-------------------
+I had an issue with the test cmd, it was refusing to run and giving error like below
+" TypeError: _micromatch(...).default.scan is not a function "
+issue solved by following the below steps:
+PROBLEM - it seems installing babel changed many nodes, yet it did NOT update the yarn.lock and package.json files accordingly.
+SOLUTION -
+$ yarn info |> made me realize some 2k files are out of date
+then ran
+$ yarn upgrade |> and it somehow sorted it but didn't compile yet
+then
+$ yarn add yarn |> to actually update yarn as it was 1.3.x and required 1.7.x
+---------------------------------------------------------------------------------------------
+
 Best Regards
 Sayed Ramadan 
 

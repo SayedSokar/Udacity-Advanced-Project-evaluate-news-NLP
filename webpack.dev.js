@@ -4,7 +4,7 @@ const webpack = require('webpack')
 const WorkboxPlugin = require('workbox-webpack-plugin');
 
 module.exports = {
-    entry: './src/client/index.js',
+    entry: ['babel-polyfill','./src/client/index.js'],
     mode: 'development',
     devtool: 'source-map',
     stats: 'minimal',

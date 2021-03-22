@@ -1,15 +1,39 @@
-import checkURL from '../js/checkURL'
+// import { urlCheck } from "../src/client/js/urlChecker";
 
-describe('Test check url functionality', () => {
-    test('Testing the checkUrl function defined or not', () => {
-        expect(checkURL).toBeDefined();
-    })
+// describe("Testing url validation functionality for urls", function () {
+// 	test("it should match the expected URL", function () {
+// 		const urlRGEX = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/gm;
+// 		const urlTest = "https://jestjs.io/"; //accepted URL
+// 		expect(urlRGEX.test(urlTest)).toBe(true);
+// 	});
+// });
 
-    test('Testing the checkUrl function return false for invalid url', () => {
-        expect(checkURL("Hello World")).toBeFalsy();
-    })
+// describe("Testing url validation functionality for illegitimate urls", () => {
+// 	var url = "How is your day today?"; //not accepted URL
+// 	test("It should return true", () => {
+// 		const response = urlCheck(url);
+// 		expect(response).toBeDefined();
+// 		expect(response).toBeFalsy();
+// 	});
+// });
 
-    test('Testing the checkUrl function return true for valid url', () => {
-        expect(checkURL("https://www.udacity.com")).toBeTruthy();
-    })
-})
+
+import { validURL } from "../js/validURL"
+
+//Testing a valid URL
+describe("Check if it is a valid URL", () => {
+    test('Test URL', () => {
+        const testUrl = 'https://www.aps.com.tn/';
+        const response = true;
+        expect(validURL(testUrl)).toEqual(response);
+    });
+});
+
+//Testing an invalid URL
+describe("Check an invalid URL", () => {
+    test('Testing an invalid URL', () => {
+        const testUrl = '\\udacity.cxom';
+        const response = false;
+        expect(validURL(testUrl)).toEqual(response);
+    });
+});

@@ -1,31 +1,31 @@
-import { checkURL } from "./checkURL"
+//-------// imports:---------------------------------//
+import { validURL } from "./validURL"
+//-----------------------------------------------------//
+//--------------Variables------------------------------//
 const fetch = require("node-fetch");
-async function handleSubmit(event) {
-    event.preventDefault()
+//-----------------------------------------------------//
+async function handleSubmit(e) {
+    e.preventDefault()
     ///alert('here')
     let url = document.getElementById('url').value
 
-    if(Client.checkURL(url))
+    if(Client.validURL(url))
     {
-        ///alert(url
-        ///send to backend 
+        //------------send to backend server
         post("http://localhost:8081/check",{url: url}).then(data =>{
-            document.getElementById("agreement").innerHTML= `Agreement: ${data.agreement}`;
-            document.getElementById("subjectivity").innerHTML=`Subjectivity: ${data.subjectivity}`;
-            document.getElementById("confidence").innerHTML=`Confidence: ${data.confidence}`;
-            document.getElementById("irony").innerHTML=`Irony: ${data.irony}`;
+            document.getElementById("agreement").innerHTML = `Agreement: ${data.agreement}`;
+            document.getElementById("subjectivity").innerHTML = `Subjectivity: ${data.subjectivity}`;
+            document.getElementById("confidence").innerHTML = `Confidence: ${data.confidence}`;
+            document.getElementById("irony").innerHTML = `irony: ${data.irony}`;
         })
       
        
     }else{ 
-        alert('URL is Wrong')
-        console.log("wrong")
+        alert(url + ': is not Valid url')
+        console.log("Error!!!! in URL format ")
     }
-
 }
-
-
-
+//-----------------END of FUNCTIONS-------------------------//
 
 const post = async (url = '', data = {}) => {
     const response = await fetch(url, {
@@ -38,9 +38,12 @@ const post = async (url = '', data = {}) => {
         body: JSON.stringify(data)
     })
     try {
+
         return await response.json()
+
     } catch (error) {
-        console.log(error)
+
+        console.log('error !!!' , error)
     }
 }
 
